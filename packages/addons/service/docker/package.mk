@@ -40,7 +40,6 @@ configure_target() {
   export DOCKER_BUILDTAGS="daemon \
                            autogen \
                            exclude_graphdriver_devicemapper \
-                           exclude_graphdriver_aufs \
                            exclude_graphdriver_btrfs"
 
   case $TARGET_ARCH in
