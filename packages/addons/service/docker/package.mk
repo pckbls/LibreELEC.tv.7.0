@@ -20,7 +20,7 @@ PKG_NAME="docker"
 PKG_VERSION="1.11.2"
 PKG_REV="104"
 PKG_ARCH="any"
-PKG_ADDON_PROJECTS="Generic RPi RPi2"
+PKG_ADDON_PROJECTS="Generic RPi RPi2 Odroid_C2"
 PKG_LICENSE="ASL"
 PKG_SITE="http://www.docker.com/"
 PKG_URL="https://github.com/docker/docker/archive/v${PKG_VERSION}.tar.gz"
@@ -59,6 +59,9 @@ configure_target() {
          ;;
       esac
       ;;
+    aarch64)
+        export GOARCH=arm64
+    ;;
   esac
 
   export GOOS=linux
